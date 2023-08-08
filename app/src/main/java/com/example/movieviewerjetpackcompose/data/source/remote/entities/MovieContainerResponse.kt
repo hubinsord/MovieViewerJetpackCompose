@@ -1,4 +1,4 @@
-package com.example.movieviewer.data.source.remote.entities
+package com.example.movieviewerjetpackcompose.data.source.remote.entities
 
 import com.example.movieviewer.data.entities.Movie
 import com.squareup.moshi.Json

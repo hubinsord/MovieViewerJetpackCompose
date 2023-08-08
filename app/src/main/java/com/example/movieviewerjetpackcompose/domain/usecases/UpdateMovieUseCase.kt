@@ -1,14 +1,13 @@
-package com.example.movieviewer.domain.usecases
+package com.example.movieviewerjetpackcompose.domain.usecases
 
-import com.example.movieviewer.domain.repositories.MovieRepository
-import io.reactivex.rxjava3.core.Completable
+import com.example.movieviewerjetpackcompose.domain.repositories.MovieRepository
 import javax.inject.Inject
 
 class UpdateMovieUseCase @Inject constructor(
     private val repository: MovieRepository
 ) {
 
-    operator fun invoke(id: String, isFavorite: Boolean) : Completable {
+    suspend operator fun invoke(id: String, isFavorite: Boolean){
         return repository.updateMovie(id, isFavorite)
     }
 }

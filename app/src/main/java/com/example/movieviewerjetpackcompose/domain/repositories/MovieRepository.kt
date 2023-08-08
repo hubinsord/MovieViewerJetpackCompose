@@ -1,13 +1,12 @@
 package com.example.movieviewerjetpackcompose.domain.repositories
 
 import com.example.movieviewer.data.entities.Movie
-import io.reactivex.rxjava3.core.Completable
-import io.reactivex.rxjava3.core.Single
+import kotlinx.coroutines.flow.Flow
 
 interface MovieRepository {
-    fun getRandomMovie(): Single<Movie>
-    fun getMovie(id: String): Single<Movie>
-    fun getMovies(isFavorite: Boolean): Single<List<Movie>>
-    fun saveMovie(movie: Movie): Completable
-    fun updateMovie(id: String, isFavorite: Boolean): Completable
+    fun getRandomMovie(): Flow<Movie>
+    fun getMovie(id: String): Flow<Movie>
+    fun getMovies(isFavorite: Boolean): Flow<List<Movie>>
+    suspend fun saveMovie(movie: Movie)
+    suspend fun updateMovie(id: String, isFavorite: Boolean)
 }

@@ -1,12 +1,10 @@
 package com.example.movieviewerjetpackcompose.data.repository
 
 import com.example.movieviewer.data.entities.Movie
-import com.example.movieviewer.data.source.MovieLocalDataSource
-import com.example.movieviewer.data.source.MovieRemoteDataSource
-import com.example.movieviewer.domain.repositories.MovieRepository
+import com.example.movieviewerjetpackcompose.data.source.MovieLocalDataSource
+import com.example.movieviewerjetpackcompose.data.source.MovieRemoteDataSource
 import com.example.movieviewerjetpackcompose.domain.repositories.MovieRepository
-import io.reactivex.rxjava3.core.Completable
-import io.reactivex.rxjava3.core.Single
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class MovieRepositoryImpl @Inject constructor(
@@ -14,24 +12,24 @@ class MovieRepositoryImpl @Inject constructor(
     private val localDataSource: MovieLocalDataSource
 ) : MovieRepository {
 
-    override fun getRandomMovie(): Single<Movie> {
+    override fun getRandomMovie(): Flow<Movie> {
         return remoteDataSource.getRandomMovie()
     }
 
-    override fun getMovie(id: String): Single<Movie> {
+    override fun getMovie(id: String): Flow<Movie> {
         return localDataSource.getMovie(id)
     }
 
-    override fun getMovies(isFavorite: Boolean): Single<List<Movie>> {
+    override fun getMovies(isFavorite: Boolean): Flow<List<Movie>> {
         return localDataSource.getAllMovies(isFavorite)
     }
 
-    override fun saveMovie(movie: Movie): Completable {
-        return localDataSource.insertMovie(movie)
+    override suspend fun saveMovie(movie: Movie) {
+        localDataSource.insertMovie(movie)
     }
 
-    override fun updateMovie(id: String, isFavorite: Boolean) : Completable {
-        return localDataSource.updateMovie(id, isFavorite)
+    override suspend fun updateMovie(id: String, isFavorite: Boolean) {
+        localDataSource.updateMovie(id, isFavorite)
     }
 
 

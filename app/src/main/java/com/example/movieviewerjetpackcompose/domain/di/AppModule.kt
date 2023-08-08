@@ -2,9 +2,9 @@ package com.example.movieviewer.domain.di
 
 import com.example.movieviewer.domain.repositories.MovieRepository
 import com.example.movieviewerjetpackcompose.domain.usecases.AddMovieUseCase
-import com.example.movieviewer.domain.usecases.GetMoviesListFromLocalUseCase
-import com.example.movieviewer.domain.usecases.GetRandomMovieUseCase
-import com.example.movieviewer.domain.usecases.UpdateMovieUseCase
+import com.example.movieviewerjetpackcompose.domain.usecases.GetMoviesListFromLocalUseCase
+import com.example.movieviewerjetpackcompose.domain.usecases.GetRandomMovieUseCase
+import com.example.movieviewerjetpackcompose.domain.usecases.UpdateMovieUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

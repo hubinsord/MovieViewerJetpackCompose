@@ -1,13 +1,12 @@
-package com.example.movieviewer.data.source
+package com.example.movieviewerjetpackcompose.data.source
 
 import com.example.movieviewer.data.entities.Movie
-import io.reactivex.rxjava3.core.Completable
-import io.reactivex.rxjava3.core.Single
+import kotlinx.coroutines.flow.Flow
 
 interface MovieLocalDataSource {
-    fun getMovie(id: String): Single<Movie>
-    fun getAllMovies(isFavorite: Boolean): Single<List<Movie>>
-    fun insertMovie(movie: Movie): Completable
-    fun updateMovie(id: String, isFavorite: Boolean) : Completable
-    fun deleteMovie(id: String): Completable
+    fun getMovie(id: String): Flow<Movie>
+    fun getAllMovies(isFavorite: Boolean): Flow<List<Movie>>
+    suspend fun insertMovie(movie: Movie)
+    suspend fun updateMovie(id: String, isFavorite: Boolean)
+    suspend fun deleteMovie(id: String)
 }

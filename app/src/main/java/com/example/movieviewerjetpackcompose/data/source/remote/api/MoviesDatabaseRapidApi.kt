@@ -1,7 +1,7 @@
 package com.example.movieviewer.data.source.remote.api
 
-import com.example.movieviewer.data.source.remote.entities.MovieContainerResponse
-import io.reactivex.rxjava3.core.Single
+import com.example.movieviewerjetpackcompose.data.source.remote.entities.MovieContainerResponse
+import kotlinx.coroutines.flow.Flow
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -11,7 +11,7 @@ interface MoviesDatabaseRapidApi {
     fun getRandomMovie(
         @Query("limit") limit: Int = 1,
         @Query("list") list: String = "most_pop_movies"
-    ): Single<MovieContainerResponse>
+    ): Flow<MovieContainerResponse>
 
     companion object {
         const val BASE_URL = "https://moviesdatabase.p.rapidapi.com/"

@@ -1,11 +1,11 @@
-package com.example.movieviewer.data.source.local.di
+package com.example.movieviewerjetpackcompose.data.source.local.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.movieviewer.data.source.local.MovieLocalDataSourceImpl
-import com.example.movieviewer.data.source.local.dao.MovieDao
-import com.example.movieviewer.data.source.local.db.MovieDatabase
-import com.example.movieviewer.data.source.MovieLocalDataSource
+import com.example.movieviewerjetpackcompose.data.source.local.MovieLocalDataSourceImpl
+import com.example.movieviewerjetpackcompose.data.source.local.dao.MovieDao
+import com.example.movieviewerjetpackcompose.data.source.local.db.MovieDatabase
+import com.example.movieviewerjetpackcompose.data.source.MovieLocalDataSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

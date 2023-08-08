@@ -1,9 +1,9 @@
-package com.example.movieviewer.data.source.local.entities
+package com.example.movieviewerjetpackcompose.data.source.local.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.movieviewer.data.entities.Movie
-import com.example.movieviewer.data.source.local.dao.MovieDao
+import com.example.movieviewerjetpackcompose.data.source.local.dao.MovieDao
 
 @Entity(tableName = MovieDao.DB_NAME)
 data class MovieDbEntity(

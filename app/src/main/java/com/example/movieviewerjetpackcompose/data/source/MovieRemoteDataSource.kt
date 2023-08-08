@@ -1,8 +1,8 @@
-package com.example.movieviewer.data.source
+package com.example.movieviewerjetpackcompose.data.source
 
 import com.example.movieviewer.data.entities.Movie
-import io.reactivex.rxjava3.core.Single
+import kotlinx.coroutines.flow.Flow
 
 interface MovieRemoteDataSource {
-    fun getRandomMovie(): Single<Movie>
+    fun getRandomMovie(): Flow<Movie>
 }

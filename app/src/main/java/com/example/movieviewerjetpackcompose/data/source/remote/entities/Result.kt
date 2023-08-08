@@ -1,4 +1,4 @@
-package com.example.movieviewer.data.source.remote.entities
+package com.example.movieviewerjetpackcompose.data.source.remote.entities
 
 import com.squareup.moshi.Json
 
@@ -19,15 +19,4 @@ data class Result(
     @Json(name = "titleText")
     val titleText: TitleText,
 
-//    @Json(name = "originalTitleText")
-//    val originalTitleText: OriginalTitleText,
-
-//    @Json(name = "position")
-//    val position: Int,
-
-//    @Json(name = "releaseDate")
-//    val releaseDate: ReleaseDate,
-
-//    @Json(name = "titleType")
-//    val titleType: TitleType
-)
+    )
