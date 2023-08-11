@@ -1,6 +1,6 @@
 package com.example.movieviewerjetpackcompose.data.source.local
 
-import com.example.movieviewer.data.entities.Movie
+import com.example.movieviewerjetpackcompose.data.entities.Movie
 import com.example.movieviewerjetpackcompose.data.source.local.db.MovieDatabase
 import com.example.movieviewerjetpackcompose.data.source.local.entities.toMovie
 import com.example.movieviewerjetpackcompose.data.source.local.entities.toMovieDbEntity

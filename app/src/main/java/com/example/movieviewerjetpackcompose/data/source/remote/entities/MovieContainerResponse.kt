@@ -1,6 +1,6 @@
 package com.example.movieviewerjetpackcompose.data.source.remote.entities
 
-import com.example.movieviewer.data.entities.Movie
+import com.example.movieviewerjetpackcompose.data.entities.Movie
 import com.squareup.moshi.Json
 
 data class MovieContainerResponse(

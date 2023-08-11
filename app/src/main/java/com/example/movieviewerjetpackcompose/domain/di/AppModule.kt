@@ -1,6 +1,6 @@
-package com.example.movieviewer.domain.di
+package com.example.movieviewerjetpackcompose.domain.di
 
-import com.example.movieviewer.domain.repositories.MovieRepository
+import com.example.movieviewerjetpackcompose.domain.repositories.MovieRepository
 import com.example.movieviewerjetpackcompose.domain.usecases.AddMovieUseCase
 import com.example.movieviewerjetpackcompose.domain.usecases.GetMoviesListFromLocalUseCase
 import com.example.movieviewerjetpackcompose.domain.usecases.GetRandomMovieUseCase
@@ -25,7 +25,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideGetMoviesListFromLocalUseCase(repository: MovieRepository) = GetMoviesListFromLocalUseCase(repository)
+    fun provideGetMoviesListUseCase(repository: MovieRepository) = GetMoviesListFromLocalUseCase(repository)
 
     @Singleton
     @Provides

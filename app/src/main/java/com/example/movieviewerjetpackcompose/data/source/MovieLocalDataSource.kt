@@ -1,6 +1,6 @@
 package com.example.movieviewerjetpackcompose.data.source
 
-import com.example.movieviewer.data.entities.Movie
+import com.example.movieviewerjetpackcompose.data.entities.Movie
 import kotlinx.coroutines.flow.Flow
 
 interface MovieLocalDataSource {

@@ -1,9 +1,9 @@
-package com.example.movieviewer.data.repository.di
+package com.example.movieviewerjetpackcompose.data.repository.di
 
 import com.example.movieviewerjetpackcompose.data.repository.MovieRepositoryImpl
 import com.example.movieviewerjetpackcompose.data.source.MovieLocalDataSource
 import com.example.movieviewerjetpackcompose.data.source.MovieRemoteDataSource
-import com.example.movieviewer.domain.repositories.MovieRepository
+import com.example.movieviewerjetpackcompose.domain.repositories.MovieRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

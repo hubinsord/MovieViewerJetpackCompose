@@ -1,6 +1,6 @@
 package com.example.movieviewerjetpackcompose.domain.usecases
 
-import com.example.movieviewer.data.entities.Movie
+import com.example.movieviewerjetpackcompose.data.entities.Movie
 import com.example.movieviewerjetpackcompose.domain.repositories.MovieRepository
 import javax.inject.Inject
 

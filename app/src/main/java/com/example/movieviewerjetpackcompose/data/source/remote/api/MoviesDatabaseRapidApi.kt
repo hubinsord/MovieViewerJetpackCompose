@@ -8,10 +8,10 @@ import retrofit2.http.Query
 interface MoviesDatabaseRapidApi {
 
     @GET("titles/random")
-    fun getRandomMovie(
+    suspend fun getRandomMovie(
         @Query("limit") limit: Int = 1,
         @Query("list") list: String = "most_pop_movies"
-    ): Flow<MovieContainerResponse>
+    ): MovieContainerResponse
 
     companion object {
         const val BASE_URL = "https://moviesdatabase.p.rapidapi.com/"

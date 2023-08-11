@@ -1,6 +1,6 @@
 package com.example.movieviewerjetpackcompose.data.repository
 
-import com.example.movieviewer.data.entities.Movie
+import com.example.movieviewerjetpackcompose.data.entities.Movie
 import com.example.movieviewerjetpackcompose.data.source.MovieLocalDataSource
 import com.example.movieviewerjetpackcompose.data.source.MovieRemoteDataSource
 import com.example.movieviewerjetpackcompose.domain.repositories.MovieRepository
