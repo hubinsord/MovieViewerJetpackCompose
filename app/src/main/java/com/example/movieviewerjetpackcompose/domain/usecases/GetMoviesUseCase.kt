@@ -5,10 +5,10 @@ import com.example.movieviewerjetpackcompose.domain.repositories.MovieRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetMoviesListFromLocalUseCase @Inject constructor(
+class GetMoviesUseCase @Inject constructor(
     private val repository: MovieRepository
 ) {
-    operator fun invoke(): Flow<List<Movie>> {
-        return repository.getMovies(true)
+    operator fun invoke(isFavorite: Boolean): Flow<List<Movie>> {
+        return repository.getMovies(isFavorite)
     }
 }

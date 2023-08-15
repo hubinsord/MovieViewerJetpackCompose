@@ -2,7 +2,7 @@ package com.example.movieviewerjetpackcompose.domain.di
 
 import com.example.movieviewerjetpackcompose.domain.repositories.MovieRepository
 import com.example.movieviewerjetpackcompose.domain.usecases.AddMovieUseCase
-import com.example.movieviewerjetpackcompose.domain.usecases.GetMoviesListFromLocalUseCase
+import com.example.movieviewerjetpackcompose.domain.usecases.GetMoviesUseCase
 import com.example.movieviewerjetpackcompose.domain.usecases.GetRandomMovieUseCase
 import com.example.movieviewerjetpackcompose.domain.usecases.UpdateMovieUseCase
 import dagger.Module
@@ -25,7 +25,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideGetMoviesListUseCase(repository: MovieRepository) = GetMoviesListFromLocalUseCase(repository)
+    fun provideGetMoviesListUseCase(repository: MovieRepository) = GetMoviesUseCase(repository)
 
     @Singleton
     @Provides

@@ -6,6 +6,7 @@ import com.example.movieviewerjetpackcompose.data.source.local.entities.toMovie
 import com.example.movieviewerjetpackcompose.data.source.local.entities.toMovieDbEntity
 import com.example.movieviewerjetpackcompose.data.source.MovieLocalDataSource
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
@@ -19,12 +20,18 @@ class MovieLocalDataSourceImpl @Inject constructor(
             .map { it.toMovie() }
 
     override fun getAllMovies(isFavorite: Boolean): Flow<List<Movie>> =
-        movieDao.getAllMovies(isFavorite)
-            .map { movieList ->
-                movieList.map {
-                    it.toMovie()
-                }
-            }
+        flow {
+            emit(
+                movieDao.getAllMovies(isFavorite)
+                    .map { it.toMovie() }
+            )
+        }
+//        movieDao.getAllMovies(isFavorite)
+//            .map { movieList ->
+//                movieList.map {
+//                    it.toMovie()
+//                }
+//            }
 
     override suspend fun insertMovie(movie: Movie) {
         movieDao.insertMovie(movie = movie.toMovieDbEntity())
